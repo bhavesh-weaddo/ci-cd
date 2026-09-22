@@ -25,5 +25,5 @@ jobs:
         run: docker build -t ci-cd-practice-pipeline .
       
       - name: Run Docker container
-        run: docker run --rm -p="9091:9091" ci-cd-practice-pipeline 
+        run: docker run -d --rm -p 9091:9091 ci-cd-practice-pipeline 
 
