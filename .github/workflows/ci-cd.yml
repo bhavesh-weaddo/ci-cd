@@ -22,5 +22,8 @@ jobs:
         run: npm install
 
       - name: Build Docker image
-        run: docker build -t ci-cd-practice .
+        run: docker build -t ci-cd-practice-pipeline .
+      
+      - name: Run Docker container
+        run: docker run --rm -p="9091:9091" ci-cd-practice-pipeline 
 
